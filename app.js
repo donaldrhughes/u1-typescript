@@ -1,7 +1,16 @@
-var add = function (n1, n2) {
-    return n1 + n2;
+var add2 = function (n1, n2, showResult, phrase) {
+    // if (typeof n1 !== 'number' || typeof n2 !== 'number')
+    // throw new Error('Incorrect Input');
+    var result = n1 + n2;
+    if (showResult) {
+        console.log(phrase + result);
+    }
+    else {
+        return result;
+    }
 };
-var number1 = '5';
+var number1 = 5;
 var number2 = 2.8;
-var result = add(Number(number1), number2);
-console.log(result);
+var printResult = true;
+var resultPhrase = "Result is: ";
+add2(number1, number2, printResult, resultPhrase);
