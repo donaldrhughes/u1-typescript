@@ -1,11 +1,24 @@
 interface Person {
     name: string,
-    age: number
+    age: number,
+    hobbies: string[],
+    role_tuple: [number, string]; //Tuple
 }
 
+enum Role {
+    ADMIN = "Admin",
+    READ_ONLY = 100,
+    AUTHOR = "Author"
+};
+const enum1 = {
+    role: Role.ADMIN
+}
+console.log(enum1)
 const person: Person = {
     name: 'Don',
-    age: 43
+    age: 43,
+    hobbies: ['Music', 'Games'],
+    role_tuple: [2, 'developer']
 };
 
 const someObj: object = {
