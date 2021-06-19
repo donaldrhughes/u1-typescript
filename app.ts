@@ -48,3 +48,16 @@ const product: Product = {
   }
   console.log(product)
   
+
+  type User = { name: string; age: number };
+ 
+function greet(user: User) {
+  console.log('Hi, I am ' + user.name);
+}
+ 
+function isOlder(user: User, checkAge: number) {
+  return checkAge < user.age;
+}
+const u1: User = { name: 'Don', age: 43 };
+greet(u1)
+console.log(isOlder(u1, 21))
