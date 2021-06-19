@@ -1,22 +1,37 @@
-const add2 = (n1:number, n2:number, showResult: boolean, phrase: string) => {
-    // if (typeof n1 !== 'number' || typeof n2 !== 'number')
-    // throw new Error('Incorrect Input');
-    const result = n1 + n2;
-    if(showResult){
-        console.log(phrase + result)
-    } else {
-        return result;
-    }
+interface Person {
+    name: string,
+    age: number
 }
 
-let number1:number;
-number1 = 5;
-const number2 = 2.8;
-const printResult = true;
-const resultPhrase = "Result is: "
+const person: Person = {
+    name: 'Don',
+    age: 43
+};
 
-add2(number1, number2, printResult, resultPhrase);
+const someObj: object = {
+    someKey: 'val'
+};
 
+console.log(person.name)
 
+interface Product {
+    id: string;
+    price: number;
+    tags: string[];
+    details: {
+      title: string;
+      description: string;
+    }
+  }
 
-
+const product: Product = {
+    id: 'abc1',
+    price: 12.99,
+    tags: ['great-offer', 'hot-and-new'],
+    details: {
+      title: 'Red Carpet',
+      description: 'A great carpet - almost brand-new!'
+    }
+  }
+  console.log(product)
+  
